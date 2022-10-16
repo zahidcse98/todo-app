@@ -13,7 +13,7 @@ const RowItem = ({todo, toggleSelect, toggleComplete}) => {
         <td scope='row'>
             <Input
                 type='checkbox'
-                id={todo.id}
+                id={todo.id} 
                 checked={todo.isSelect}
                 onChange={() => toggleSelect(todo.id)}
              />
@@ -67,7 +67,7 @@ const TableView = ({todos, toggleSelect, toggleComplete}) => {
    
 }
 
-TableView.prototype = {
+TableView.propType = {
     todo: PropTypes.object.isRequired,
     toggleSelect: PropTypes.func.isRequired,
     toggleComplete: PropTypes.func.isRequired

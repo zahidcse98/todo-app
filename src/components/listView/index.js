@@ -41,7 +41,7 @@ const ListView = ({todos, toggleSelect, toggleComplete}) => {
     )
 }
 
-ListView.prototype = {
+ListView.propType = {
     todo: PropTypes.object.isRequired,
     toggleSelect: PropTypes.func.isRequired,
     toggleComplete: PropTypes.func.isRequired
