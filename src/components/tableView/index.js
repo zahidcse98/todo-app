@@ -19,7 +19,7 @@ const RowItem = ({todo, toggleSelect, toggleComplete}) => {
              />
         </td>
         <td> {todo.time.toDateString()} </td>
-        <td>{todo.text}</td>
+        <td>{todo.title}</td>
         <td>
             {<Button
                 color={todo.isComplete ? 'danger' : 'success'}

@@ -12,7 +12,7 @@ const SearchPanel = ({term, handleChange, toggleForm}) => {
             value={term}
             onChange={event => handleChange(event.target.value)}
         />
-        <Button onClick={toggleForm}>
+        <Button onClick={toggleForm} color='success'>
             New
         </Button>
         </div>

@@ -16,7 +16,7 @@ class CreateTodoForm extends React.Component {
         })
     }
 
-    handleSubmit = event =>{
+    handleSubmit = event => {
         event.preventDefault();
         this.props.createTodo(this.state)
         event.target.reset()
@@ -25,7 +25,7 @@ class CreateTodoForm extends React.Component {
 
     render() {
         return(
-            <Form>
+            <Form onSubmit={this.handleSubmit}>
                 <FormGroup>
                     <Label>Enter Task</Label>
                     <Input 
@@ -45,7 +45,7 @@ class CreateTodoForm extends React.Component {
                         onChange={this.handleChange}
                     />
                 </FormGroup>
-                <Button type='submit'>Create Task</Button>
+                <Button type='submit' color='success'>Create Task</Button>
             </Form>
         )
     }
