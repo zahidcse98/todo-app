@@ -3,14 +3,14 @@ import React from 'react';
 import { Button, Input } from 'reactstrap';
 
 
-const SearchPanel = ({term, handleChange, toggleForm}) => {
+const SearchPanel = ({term, handleSearch, toggleForm}) => {
     return(
         <div className='d-flex'>
              <Input 
             placeholder='Search here'
             className='mr-3'
             value={term}
-            onChange={event => handleChange(event.target.value)}
+            onChange={event => handleSearch(event.target.value)}
         />
         <Button onClick={toggleForm} color='success'>
             New
