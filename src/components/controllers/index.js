@@ -6,7 +6,7 @@ import FilterController from './filterController';
 import SearchPanel from "./searchPanel";
 import ViewControl from './viewController';
 
-const Controller = ({term, handleSearch, toggleForm, handleFilter, view, changeView, clearSelected, clearCompleted, reset}) =>{
+const Controller = ({term, handleSearch, toggleForm, handleFilter, view, changeView, clearSelected, clearCompleted, reset, filterButtonIndicator}) =>{
     return(
         <div>
             <SearchPanel
@@ -16,7 +16,7 @@ const Controller = ({term, handleSearch, toggleForm, handleFilter, view, changeV
             />
             <Row className="my-4">
                 <Col md={{size: 4}}>
-                    <FilterController handleFilter={handleFilter} />
+                <FilterController handleFilter={handleFilter} filterButtonIndicator={filterButtonIndicator} />
                 </Col>
                 <Col md={{size: 4}}>
                     <ViewControl view={view} changeView={changeView} />
@@ -45,6 +45,7 @@ Controller.propTypes = {
     clearSelected: PropTypes.func.isRequired,
     clearCompleted: PropTypes.func.isRequired,
     reset: PropTypes.func.isRequired,
+    filterButtonIndicator: PropTypes.func.isRequired
 }
 
 export default Controller;

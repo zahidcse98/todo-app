@@ -101,6 +101,14 @@ class Todos extends React.Component {
       return todos
     }
   }
+
+  filterButtonIndicator = (color) => {
+    if(this.state.filter === color) {
+      return true
+    } else {
+      return false
+    }
+  }
   
   performSearch = () => {
     return this.state.todos.filter((todo) =>
@@ -140,6 +148,7 @@ class Todos extends React.Component {
           clearSelected={this.clearSelected}
           clearCompleted={this.clearCompleted}
           reset={this.reset}
+          filterButtonIndicator={this.filterButtonIndicator}
         />
         <div>{this.getView()}</div>
         <div></div>
